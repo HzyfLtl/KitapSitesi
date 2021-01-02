@@ -56,5 +56,7 @@ app.get("/kitap/:isim/:index", function(req, res){
 
 let port = process.env.PORT;
 if(port == "" || port == null){
-  port = 3000;
+  port = 5000;
 }
+
+app.listen(port);
