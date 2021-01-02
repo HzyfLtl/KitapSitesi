@@ -26,8 +26,9 @@ app.get("/kitap/:isim/:index", function(req, res){
 });
 
 
-let port = process.env.port;
+let port = process.env.PORT;
 if(port == "" || port == null){
   port = 8000;
 }
+console.log(`Your port is ${port}`);
 app.listen(port);
