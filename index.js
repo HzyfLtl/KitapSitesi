@@ -5,7 +5,7 @@ app.use(express.static(__dirname + "/dosyalar"));
 
 
 var ucTaneKitap = [
-  {kitapismi : "Sefiller Hugo" , fiyat: 20 , index : 0},
+  {kitapismi : "Sefiller Hugo 1" , fiyat: 20 , index : 0},
   {kitapismi : "Suç ve Ceza" , fiyat: 50, index : 1},
   {kitapismi : "Tehlikeli Oyunlar" , fiyat: 30, index: 2}
 ];
@@ -26,6 +26,8 @@ app.get("/kitap/:isim/:index", function(req, res){
 });
 
 
-
-
-app.listen(8000);
+let port = process.env.port;
+if(port == "" || port == null){
+  port = 8000;
+}
+app.listen(port);
