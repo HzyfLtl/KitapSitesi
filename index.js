@@ -5,7 +5,7 @@ app.use(express.static(__dirname + "/dosyalar"));
 
 
 var ucTaneKitap = [
-  {kitapismi : "Sefiller" , fiyat: 20 , index : 0},
+  {kitapismi : "Sefiller Hugo" , fiyat: 20 , index : 0},
   {kitapismi : "Suç ve Ceza" , fiyat: 50, index : 1},
   {kitapismi : "Tehlikeli Oyunlar" , fiyat: 30, index: 2}
 ];
