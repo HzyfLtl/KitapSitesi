@@ -13,12 +13,22 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Anasayfa <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">İletişim</a>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Kategoriler
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+          <% for(var i = 0 ; i < kategoriler.length ; i++) { %>
+            <a class="dropdown-item" href="/kategori/<%= kategoriler[i].kategori_link  %>"><%= kategoriler[i].kategori_ismi  %></a>
+          <% } %>
+
+        </div>
       </li>
 
     </ul>
-    <form  class="form-inline my-2 my-lg-0">
+    <form action="/arama" class="form-inline my-2 my-lg-0">
       <input name="kitap" class="form-control mr-sm-2" type="search" placeholder="Kitap ismi giriniz" aria-label="Search">
       <button class="btn btn-dark my-2 my-sm-0" type="submit">Arama</button>
     </form>
